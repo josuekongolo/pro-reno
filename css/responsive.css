@@ -1,0 +1,221 @@
+/* ===================================
+   Pro-Reno AS - Responsive Stylesheet
+   Mobile-first responsive design
+   =================================== */
+
+/* ===================================
+   Tablet (768px and up)
+   =================================== */
+@media screen and (min-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.375rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Logo */
+    .logo-tagline {
+        display: block;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Process Steps */
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Area Grid */
+    .area-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Project Categories */
+    .project-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Form Grid */
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+/* ===================================
+   Desktop (1024px and up)
+   =================================== */
+@media screen and (min-width: 1024px) {
+    /* Navigation */
+    .nav {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none !important;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Process Steps */
+    .process-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Project Categories */
+    .project-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+        grid-template-columns: 1fr 1.5fr;
+        gap: var(--spacing-xxl);
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* ===================================
+   Large Desktop (1200px and up)
+   =================================== */
+@media screen and (min-width: 1200px) {
+    /* Hero */
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    /* Section padding */
+    .section {
+        padding: var(--spacing-xxl) 0;
+    }
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+@media print {
+    .header,
+    .mobile-nav,
+    .hero-buttons,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+/* ===================================
+   Reduced Motion
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===================================
+   High Contrast Mode
+   =================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #1a472e;
+        --color-secondary: #8B4513;
+        --color-text: #000000;
+        --color-text-light: #333333;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
